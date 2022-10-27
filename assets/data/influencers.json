@@ -1,0 +1,65 @@
+[
+    {
+        "id" : 1,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Teddy Kelly",
+        "description" : "Muralista mexicano multicultural, devoto del movimiento Bauhaus, incansable promotor y creyente de la tecnología NFT.",
+        "tags": [
+            "México",
+            "Gamer"
+        ]
+    },
+    {
+        "id" : 2,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Neutro YT",
+        "description" : "Joven peruano de 18 años que la rompe en youtube con sus podcasts y videos semanales.",
+        "tags": [
+            "Podcaster"
+        ]
+    },
+    {
+        "id" : 3,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Jefrain",
+        "description" : "Creador de contenido peruano con 7 años en redes sociales. Stream casi todos los dias en Twitch.",
+        "tags": [
+            "Streamer",
+            "Creador de contenido"
+        ]
+    },
+    {
+        "id" : 4,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Fercho",
+        "description" : "Cantante colombiano en auge con 10 exitos mundiales que están top 1 en spotify",
+        "tags": [
+            "Cantante"
+        ]
+    },
+    {
+        "id" : 5,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Ashleymgn",
+        "description" : "Argentina, Sonora | HAWK DE HAWKERS CREW Vamos a hacer posible lo imposible",
+        "tags": [
+            "Argentina",
+            "Streamer"
+        ]
+    },
+    {
+        "id" : 6,
+        "image" : "https://via.placeholder.com/150",
+        "banner" : "https://via.placeholder.com/728x280.png?text=Banner",
+        "name" : "Darling",
+        "description" : "Personal trainer paraguaya con 4 años de experiencia, asesorando a más de 1000 personas en todo el mundo.",
+        "tags": [
+            "Fitness coach"
+        ]
+    }
+]

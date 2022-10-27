@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import { resolve } from 'path'
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 
 export default {
   alias: {
@@ -8,7 +9,12 @@ export default {
     'data': resolve(__dirname, './assets/data')
   },
 
-  css: ['@/assets/bootstrap/bootstrap.scss'],
+  ssr: false,
+
+  css: [
+    '@/assets/bootstrap/bootstrap.scss',
+    '@/assets/bootstrap/app.scss'
+  ],
 
   dev: process.env.NODE_ENV !== 'production',
 
@@ -17,22 +23,8 @@ export default {
     walletBridge: process.env.WALLET_BRIDGE || 'https://bridge.walletconnect.org',
   },
 
-  head: {
-    title: 'Tokenizate.io',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Descripción de Tokenizate.io'
-      }
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
-  },
-
   loading: {
     color: 'blue',
     height: '5px'
-  }
+  },
 }

@@ -1,51 +1,17 @@
-@import "mixins/banner";
-@include bsBanner("");
-
-
-// scss-docs-start import-stack
-// Configuration
-@import "functions";
+//Core files
+@import "bootstrap/functions";
+@import "bootstrap/variables";
 @import "variables";
-@import "maps";
-@import "mixins";
-@import "utilities";
+@import "bootstrap/bootstrap";
 
-// Layout & components
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "containers";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "accordion";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "alert";
-@import "progress";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "offcanvas";
-@import "placeholders";
-
-// Helpers
-@import "helpers";
-
-// Utilities
-@import "utilities/api";
-// scss-docs-end import-stack
+@import "custom/components/reboot";
+@import "custom/components/backgrounds";
+@import "custom/components/badge";
+@import "custom/components/buttons";
+@import "custom/components/breadcrumb";
+@import "custom/components/card";
+@import "custom/components/dropdown";
+@import "custom/components/nav";
+@import "custom/components/table";
+@import "custom/components/pagination";
+@import "custom/components/progress";

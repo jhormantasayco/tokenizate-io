@@ -1,0 +1,11 @@
+node_modules/**/*
+.nuxt/**/*
+dist/**/*
+static/js/**/*
+static/lib/**/*
+
+# Onesignal
+OneSignalSDK*
+
+# Service worker
+sw.*
