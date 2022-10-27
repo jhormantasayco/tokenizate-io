@@ -4,36 +4,31 @@
         <div class="d-flex">
             <div class="navbar-brand-box">
                 <NuxtLink to="/" class="logo logo-light">
-                    <span class="logo-sm">
+                    <span class="logo-sm text-main">
                         Tokenizate.io
                     </span>
-                    <span class="logo-lg">
+                    <span class="logo-lg text-main">
                         Tokenizate.io
                     </span>
                 </NuxtLink>
             </div>
         </div>
         <div class="d-flex">
-            <div class="dropdown d-none d-lg-inline-block ms-1">
+            <div class="dropdown d-none d-lg-inline-block ms-4">
                 <button type="button" class="btn header-item">
                     Explorar
                 </button>
             </div>
-            <div class="dropdown d-none d-lg-inline-block ms-1">
-                <button type="button" class="btn header-item">
-                    Ser Creador
-                </button>
-            </div>
-            <div class="dropdown d-none d-lg-inline-block ms-1">
+            <div class="dropdown d-none d-lg-inline-block ms-4">
                 <button type="button" class="btn header-item">
                     Ser Creador
                 </button>
             </div>
             <div class="divider"></div>
-            <div class="dropdown d-none d-lg-inline-block ms-1">
-                <div class="p-3">
-                    <button type="button" class="btn btn-warning" @click="connect()">
-                        Conecta tu waller
+            <div class="dropdown d-none d-lg-inline-block ms-4">
+                <div class="btn-navbar-wrapper">
+                    <button type="button" class="btn btn-warning text-base font-semibold py-2 px-5" @click="connect()">
+                        Conecta tu wallet
                     </button>
                 </div>
             </div>
@@ -45,7 +40,7 @@
 <script>
 
     import Web3 from "web3";
-    import WalletConnectProvider from "@walletconnect/web3-provider";
+    import WalletConnectProvider from '@walletconnect/web3-provider/dist/umd/index.min.js'
 
     const provider = new WalletConnectProvider({
         rpc: {
@@ -55,8 +50,8 @@
         bridge: "https://bridge.myhostedserver.com",
         qrcodeModalOptions: {
             mobileLinks: [
-            "metamask",
-            "trust",
+                "metamask",
+                "trust",
             ],
         },
     });
@@ -74,7 +69,8 @@
             async connect () {
                 await provider.enable();
                 alert("connected")
-                //const accounts = await web3.eth.getAccounts();
+                const accounts = await web3.eth.getAccounts();
+                console.log(accounts);
             },
             async disconnect () {
                 await provider.disconnect();

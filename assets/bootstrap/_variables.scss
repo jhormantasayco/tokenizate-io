@@ -24,7 +24,7 @@ $sidebar-dark-menu-item-hover-color: #ffffff;
 $sidebar-dark-menu-item-active-color: #ffffff;
 
 // Topbar - Deafult Light
-$header-height: 70px;
+$header-height: 80px;
 $header-bg:                                           var(--#{$prefix}heading-bg);
 $header-item-color:                                   var(--#{$prefix}header-item-color);
 
@@ -53,7 +53,7 @@ $rightbar-width:  280px;
 $display-none: none;
 $display-block: block;
 
-// Brand 
+// Brand
 $navbar-brand-box-width: 250px;
 
 // Boxed layout width
@@ -116,7 +116,7 @@ $purple:  #6f42c1;
 $pink:    #e83e8c;
 $red:     #f46a6a;
 $orange:  #f1734f;
-$yellow:  #f1b44c;
+$yellow:  rgb(255, 205, 104);
 $green:   #34c38f;
 $teal:    #050505;
 $cyan:    #50a5f1;
@@ -136,20 +136,20 @@ $colors: (
     "cyan":       $cyan,
     "black":      $black,
     "white":      $white,
-    "gray":       $gray-600,
+    "gray":       #545a6d,
     "gray-dark":  $gray-800
 );
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
 $primary:       $blue;
-$secondary:     $gray-600;
+$secondary:     rgb(22, 34 ,68);
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-200;
-$dark:          $gray-800;
+$dark:          #545a6d;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -479,7 +479,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #f8f8fb;
+$body-bg:                   rgb(244,244,244);
 $body-color:                $gray-700;
 $body-text-align:           null;
 
@@ -620,7 +620,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      'Poppins', sans-serif;
+$font-family-sans-serif:      'Inter', 'Poppins', sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 // stylelint-enable value-keyword-case
@@ -630,7 +630,7 @@ $font-family-code:            var(--#{$variable-prefix}font-monospace);
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
 $font-size-root:              null;
-$font-size-base:              0.8125rem;
+$font-size-base:              0.875rem;
 $font-size-sm:                $font-size-base * .875;
 $font-size-lg:                $font-size-base * 1.25;
 
@@ -1451,12 +1451,12 @@ $toast-header-border-color:         var(--#{$variable-prefix}border-color);
 // Badges
 
 // scss-docs-start badge-variables
-$badge-font-size:                   75%;
-$badge-font-weight:                 $fw-medium;
+$badge-font-size:                   13px;
+$badge-font-weight:                 400;
 $badge-color:                       $white;
-$badge-padding-y:                   .25em;
-$badge-padding-x:                   .4em;
-$badge-border-radius:               $border-radius;
+$badge-padding-y:                   .3em;
+$badge-padding-x:                   2em;
+$badge-border-radius:               20px;
 // scss-docs-end badge-variables
 
 

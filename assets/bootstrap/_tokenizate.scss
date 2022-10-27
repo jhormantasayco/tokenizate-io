@@ -1,0 +1,16 @@
+.text-main{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-navbar-wrapper{
+    line-height: $header-height;
+}
+
+.avatar-button{
+    position: absolute;
+    right: 10px;
+    top: -20px;
+    z-index: 999;
+}

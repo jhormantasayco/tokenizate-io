@@ -1,6 +1,6 @@
-// 
+//
 // _badge.scss
-// 
+//
 
 
 .badge {
@@ -53,9 +53,11 @@
 }
 
 .badge-soft-#{$color} {
-      @include badge-variant-soft($value);
+    color: $value;
+    border: 1px solid $value;
+    //@include badge-variant-soft($value);
   }
-  
+
 }
 
 // .badge.badge-soft-dark {

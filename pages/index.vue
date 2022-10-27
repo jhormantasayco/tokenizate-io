@@ -2,11 +2,30 @@
   <div class="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                <h4 class="mb-sm-0 font-size-20">Explorar</h4>
+            <div class="d-sm-flex align-items-center justify-content-between mb-5">
+              <h4 class="font-size-22 font-medium">Explorar</h4>
             </div>
         </div>
     </div>
+
+    <div class="row mb-5">
+      <div class="col-10">
+        <div class="input-group">
+            <label class="input-group-text">
+              <i class="fa fa-search"></i>
+            </label>
+            <input type="text" class="form-control" placeholder="Buscar por nombre o usuario">
+        </div>
+      </div>
+      <div class="col-2">
+        <div>
+          <button class="btn btn-outline-secondary w-100 waves-effect text-bold">
+            <i class="fa fa-filter"></i> Filtrar
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="row">
       <div v-for="(influencer, index) in influencers" :key="index" class="col-xl-4">
         <Card :influencer="influencer"></Card>
@@ -39,20 +58,6 @@
     head () {
       return {
         title: 'Tokenizate.io | Home',
-        bodyAttrs: {
-          'data-topbar' : 'dark',
-          'data-layout' : 'horizontal',
-        },
-        meta: [
-          { charset: 'utf-8' },
-          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'Descripción de Tokenizate.io'
-          }
-        ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
       }
     },
   }
