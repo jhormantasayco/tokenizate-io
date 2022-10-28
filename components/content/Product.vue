@@ -2,7 +2,9 @@
 <div class="card border border-red-500">
     <div class="card-body pt-3">
         <div class="mb-3">
-            <img :src="product.image" :alt="product.name" class="img-fluid">
+            <NuxtLink :to="`/users/${influencerId}/article/${product.id}`" :title="`Producto: ${product.name}`">
+                <img :src="product.image" :alt="product.name" loading="lazy" class="img-fluid">
+            </NuxtLink>
         </div>
         <div class="mb-3">
             <h4 class="font-semibold font-size-16">
@@ -16,9 +18,9 @@
             {{ product.amount }} $JE
         </div>
         <div class="mb-3">
-            <button type="button" class="btn btn-outline-secondary w-100 waves-effect">
+            <NuxtLink :to="`/users/${influencerId}/article/${product.id}`" class="btn btn-outline-secondary w-100 waves-effect" :title="`Producto: ${product.name}`">
                 Ver detalle
-            </button>
+            </NuxtLink>
         </div>
     </div>
 </div>
@@ -30,6 +32,10 @@ export default {
     props: {
         product: {
             type: Object,
+            required: true,
+        },
+        influencerId: {
+            type: Number,
             required: true,
         },
     },

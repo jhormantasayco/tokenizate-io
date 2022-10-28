@@ -18,7 +18,7 @@ export default {
 
   app: {
     head:{
-      title: 'Tokenizate.io',
+      title: 'Tokenizate.app',
       bodyAttrs: {
         'data-topbar' : 'dark',
         'data-layout' : 'horizontal',
@@ -29,7 +29,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Descripción de Tokenizate.io'
+          content: 'Descripción de Tokenizate.app'
         }
       ],
       link: [

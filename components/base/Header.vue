@@ -5,19 +5,21 @@
             <div class="navbar-brand-box">
                 <NuxtLink to="/" class="logo logo-light">
                     <span class="logo-sm text-main">
-                        Tokenizate.io
+                        Tokenizate.app
                     </span>
                     <span class="logo-lg text-main">
-                        Tokenizate.io
+                        Tokenizate.app
                     </span>
                 </NuxtLink>
             </div>
         </div>
         <div class="d-flex">
             <div class="dropdown d-none d-lg-inline-block ms-4">
-                <button type="button" class="btn header-item">
-                    Explorar
-                </button>
+                <NuxtLink to="/">
+                    <button type="button" class="btn header-item">
+                        Explorar
+                    </button>
+                </NuxtLink>
             </div>
             <div class="dropdown d-none d-lg-inline-block ms-4">
                 <button type="button" class="btn header-item">
@@ -27,7 +29,7 @@
             <div class="divider"></div>
             <div class="dropdown d-none d-lg-inline-block ms-4">
                 <div class="btn-navbar-wrapper">
-                    <button type="button" class="btn btn-warning text-base font-semibold py-2 px-5" @click="connect()">
+                    <button type="button" class="btn btn-warning text-base font-semibold py-2 px-5" title="Conecta tu wallet" @click="connect()">
                         Conecta tu wallet
                     </button>
                 </div>
@@ -43,17 +45,7 @@
     import WalletConnectProvider from '@walletconnect/web3-provider/dist/umd/index.min.js'
 
     const provider = new WalletConnectProvider({
-        rpc: {
-            97: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-            56: "https://bsc-dataseed1.binance.org/",
-        },
-        bridge: "https://bridge.myhostedserver.com",
-        qrcodeModalOptions: {
-            mobileLinks: [
-                "metamask",
-                "trust",
-            ],
-        },
+        infuraId: "dec0eb1e0ded4068ba13d0f2c9d4939b",
     });
 
     const web3 = new Web3(provider);

@@ -10,7 +10,7 @@
                 <li class="list-group-item">
                     <div class="row d-flex align-items-center">
                         <div class="col">
-                            <input type="text" name="" class="form-control" placeholder="0.00">
+                            <input type="number" min="0" class="form-control" v-model="from" placeholder="0.00">
                         </div>
                         <div class="col">
                             <div class="d-flex align-items-center justify-content-end">
@@ -24,12 +24,12 @@
                 <li class="list-group-item">
                     <div class="row d-flex align-items-center">
                         <div class="col">
-                            <input type="text" name="" class="form-control" placeholder="0.00">
+                            <input type="number" min="0" class="form-control" v-model="to" placeholder="0.00">
                         </div>
                         <div class="col">
                             <div class="d-flex align-items-center justify-content-end">
                                 <div class="mr-3">
-                                    <img :src="influencer.image" :alt="influencer.name" width="30" class="rounded-circle">
+                                    <img :src="influencer.image" :alt="influencer.name" :title="influencer.name" loading="lazy" width="30" class="rounded-circle">
                                 </div>
                                 <div class="mr-3">$JE</div>
                             </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="mb-3">
             <p>
-                Estás comprando <strong>0 dólares</strong> en $JE
+                Estás comprando <strong>{{ to }} {{ placeholder }}</strong> en $JE
             </p>
         </div>
         <div>
@@ -59,6 +59,17 @@ export default {
             required: true,
         },
     },
+    data(){
+        return {
+            from: 0.00,
+            to: 0.00
+        }
+    },
+    computed: {
+        placeholder() {
+            return this.to === 1 ? 'Dólar' : 'Dólares'
+        }
+    }
 }
 </script>
 <style>
