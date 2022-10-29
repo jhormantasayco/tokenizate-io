@@ -18,7 +18,7 @@
             {{ product.amount }} ${{ influencer.money }}
         </div>
         <div class="mb-3">
-            <NuxtLink :to="`/users/${influencerId}/article/${product.id}`" class="btn btn-outline-secondary w-100 waves-effect" :title="`Producto: ${product.name}`">
+            <NuxtLink :to="`/users/${influencer.id}/article/${product.id}`" class="btn btn-outline-secondary w-100 waves-effect" :title="`Producto: ${product.name}`">
                 Ver detalle
             </NuxtLink>
         </div>
