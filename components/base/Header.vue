@@ -14,14 +14,14 @@
             </div>
         </div>
         <div class="d-flex">
-            <div class="dropdown d-none d-lg-inline-block ms-4">
+            <div class="dropdown ms-4">
                 <NuxtLink to="/">
                     <button type="button" class="btn header-item">
                         Explorar
                     </button>
                 </NuxtLink>
             </div>
-            <div class="dropdown d-none d-lg-inline-block ms-4">
+            <div class="dropdown ms-4">
                 <NuxtLink to="/register">
                     <button type="button" class="btn header-item">
                         Ser Creador
@@ -56,6 +56,32 @@
         </div>
     </div>
 </header>
+
+<section class="text-center d-block d-lg-none d-xl-none d-xxl-none c4a-mobile">
+    <div class="mt-4">
+        <div v-if="address">
+            <div class="btn btn-light py-1 px-3 font-size-12 font-semibold" @click="disconnect()">
+                <div class="d-flex align-items-center">
+                    <div class="mr-3">
+                        <img src="@/static/wallet.png" alt="wallter">
+                    </div>
+                    <div class="text-left">
+                        <p>
+                            {{ hash }}
+                        </p>
+                        <p class="text-red-700">Desconectar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-else class="btn-navbar-wrapper">
+            <button type="button" class="btn btn-warning text-base font-semibold py-2 px-5" title="Conecta tu wallet" @click="connect()">
+                Conecta tu wallet
+            </button>
+        </div>
+    </div>
+</section>
+
 </template>
 
 <script>

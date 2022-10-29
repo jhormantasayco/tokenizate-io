@@ -8,9 +8,9 @@
         </div>
     </div>
 
-    <div class="row mb-5">
+    <div class="row mb-4">
       <form @submit.prevent="filterInfluencers()" class="row">
-        <div class="col-10">
+        <div class="col-sm-10 mb-3">
           <div class="input-group">
               <label class="input-group-text">
                 <i class="fa fa-search"></i>
@@ -18,7 +18,7 @@
               <input type="text" class="form-control" v-model="search" placeholder="Buscar por nombre o usuario">
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-sm-2 mb-3">
           <div>
             <button type="submit" class="btn btn-outline-secondary w-100 waves-effect text-bold">
               <i class="fa fa-filter"></i> Filtrar

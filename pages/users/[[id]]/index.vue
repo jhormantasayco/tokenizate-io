@@ -13,11 +13,11 @@
         </div>
     </div>
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-4">
         <Profile :influencer="influencer"/>
         <Buy :influencer="influencer"/>
       </div>
-      <div class="col-8">
+      <div class="col-lg-8">
         <Marketplace :influencer="influencer"/>
       </div>
     </div>

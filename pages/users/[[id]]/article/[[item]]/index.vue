@@ -13,14 +13,14 @@
         </div>
     </div>
     <div class="row">
-      <div class="col-4 flex">
+      <div class="col-lg-4 flex">
         <div class="card">
           <div class="card-body pt-4">
             <img :src="product.image" :alt="product.name" :title="product.name" class="img-fluid">
           </div>
         </div>
       </div>
-      <div class="col-8 flex">
+      <div class="col-lg-8 flex">
         <div class="card">
           <div class="card-body p-4 d-flex align-content-between flex-wrap">
             <div class="w-100">
@@ -41,7 +41,7 @@
             </div>
             <div class="w-100">
               <div class="row flex">
-                <div class="col-2">
+                <div class="col-sm-6 col-lg-4 col-xl-3 mb-3">
                   <div class="input-group">
                       <span class="input-group-btn input-group-prepend">
                         <button class="btn btn-light px-3" type="button" @click="decrement()" title="Dismunuir">
@@ -56,7 +56,7 @@
                       </span>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
                   <button type="button" class="btn btn-warning font-medium px-5" @click="buy" title="Comprar">
                     Comprar
                   </button>

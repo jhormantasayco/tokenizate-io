@@ -25,7 +25,7 @@
             </h5>
             <div>
                 <div class="row">
-                    <div class="col-6 flex" v-for="(product, index) in influencer.products" :key="index">
+                    <div class="col-lg-6 flex" v-for="(product, index) in influencer.products" :key="index">
                         <Product :product="product" :influencer="influencer"/>
                     </div>
                 </div>
