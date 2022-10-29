@@ -30,7 +30,7 @@
                 <div class="card-body p-4">
                   <h4 class="font-size-18 font-semibold mb-4">Datos basicos</h4>
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-sm-6">
                       <div class="form-group mb-4">
                         <label>Nombre y Apellidos:</label>
                         <input type="text" class="form-control" v-model="form.name" placeholder="Ingresar" required="required">
@@ -42,7 +42,7 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                       <div class="form-group mb-4">
                         <label>Nombre de usuario:</label>
                         <input type="text" class="form-control" v-model="form.username" placeholder="Ingresar" required="required">
@@ -74,13 +74,13 @@
                     </p>
                   </div>
                   <div class="row mb-4">
-                    <div class="col-6">
-                    <div class="form-group">
+                    <div class="col-sm-6">
+                    <div class="form-group mb-4">
                       <label>Nombre de usuario:</label>
                       <input type="text" class="form-control" v-model="form.token" placeholder="Ejemplo: AlexTorresToken" required="required">
                     </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                     <div class="form-group">
                       <label>Symbolo de la moneda:</label>
                       <input type="text" class="form-control" v-model="form.symbol" placeholder="Ejemplo: ATT" required="required">
