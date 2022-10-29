@@ -36,7 +36,7 @@
                   {{ product.description }}
               </div>
               <div class="mb-3 font-bold font-size-18">
-                  {{ product.amount }} $JE
+                  {{ product.amount }} ${{ influencer.money }}
               </div>
             </div>
             <div class="w-100">
@@ -57,7 +57,7 @@
                   </div>
                 </div>
                 <div class="col-3">
-                  <button type="button" class="btn btn-warning font-medium px-5" title="Comprar">
+                  <button type="button" class="btn btn-warning font-medium px-5" @click="buy" title="Comprar">
                     Comprar
                   </button>
                 </div>
@@ -110,6 +110,9 @@ export default {
         if(this.qty > 1){
           this.qty = this.qty - 1;
         }
+      },
+      buy(){
+        alert('[[ Comprar ]]')
       }
     },
   }

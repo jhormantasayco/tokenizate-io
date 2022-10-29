@@ -9,25 +9,27 @@
     </div>
 
     <div class="row mb-5">
-      <div class="col-10">
-        <div class="input-group">
-            <label class="input-group-text">
-              <i class="fa fa-search"></i>
-            </label>
-            <input type="text" class="form-control" placeholder="Buscar por nombre o usuario">
+      <form @submit.prevent="filterInfluencers()" class="row">
+        <div class="col-10">
+          <div class="input-group">
+              <label class="input-group-text">
+                <i class="fa fa-search"></i>
+              </label>
+              <input type="text" class="form-control" v-model="search" placeholder="Buscar por nombre o usuario">
+          </div>
         </div>
-      </div>
-      <div class="col-2">
-        <div>
-          <button class="btn btn-outline-secondary w-100 waves-effect text-bold">
-            <i class="fa fa-filter"></i> Filtrar
-          </button>
+        <div class="col-2">
+          <div>
+            <button type="submit" class="btn btn-outline-secondary w-100 waves-effect text-bold">
+              <i class="fa fa-filter"></i> Filtrar
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <div class="row">
-      <div v-for="(influencer, index) in influencers" :key="index" class="col-xl-4">
+      <div v-for="(influencer, index) in influencers" :key="index" class="col-xl-4 flex">
         <Card :influencer="influencer"></Card>
       </div>
     </div>
@@ -39,6 +41,8 @@
   import Card from '~/components/content/Card'
   import influencers from '~/assets/data/influencers.json'
 
+  const influencersRows = influencers;
+
   export default {
     layout: 'default',
     name: 'Home',
@@ -46,13 +50,22 @@
       Card
     },
     data: () => ({
+      search : '',
       influencers
     }),
     mounted() {
 
     },
     methods: {
-
+      filterInfluencers(){
+        if(this.search){
+          this.influencers = this.influencers.filter((influencer) => {
+            return influencer.name.toLowerCase().includes(this.search.toLowerCase())
+          })
+        }else{
+          this.influencers = influencersRows;
+        }
+      }
     },
 
     head () {

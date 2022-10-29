@@ -131,7 +131,7 @@
       },
       methods: {
         sendForm(){
-          alert('Submit');
+          alert('[[ Crear token ]]');
           console.log(this.form);
         }
       },

@@ -44,7 +44,7 @@
             </p>
         </div>
         <div>
-            <button type="button" class="btn btn-warning w-100">Comprar tokens</button>
+            <button type="button" class="btn btn-warning w-100" @click="buy">Comprar tokens</button>
         </div>
     </div>
 </div>
@@ -63,6 +63,11 @@ export default {
         return {
             from: 0.00,
             to: 0.00
+        }
+    },
+    methods: {
+        buy(){
+            alert('[[ Comprar Tokens ]]')
         }
     },
     computed: {
