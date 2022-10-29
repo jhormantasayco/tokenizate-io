@@ -3,10 +3,8 @@
  *
  * Example: https://blog.logrocket.com/integrating-walletconnect-vue-js-dapps/
  * Base: https://codesandbox.io/s/411wt?file=/src/App.vue
+ *
+ * npm run generate
+ *
+ * https://github.com/WalletConnect/walletconnect-monorepo/issues/449
  */
-
-/*
-https://github.com/WalletConnect/walletconnect-monorepo/issues/449
-
-*/
-
