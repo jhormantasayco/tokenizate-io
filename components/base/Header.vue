@@ -3,7 +3,7 @@
     <div class="navbar-header">
         <div class="d-flex">
             <div class="navbar-brand-box">
-                <NuxtLink to="/" class="logo logo-light">
+                <NuxtLink to="/" class="logo logo-light" title="Tokenizate.app">
                     <span class="logo-sm text-main">
                         Tokenizate.app
                     </span>
@@ -22,9 +22,11 @@
                 </NuxtLink>
             </div>
             <div class="dropdown d-none d-lg-inline-block ms-4">
-                <button type="button" class="btn header-item">
-                    Ser Creador
-                </button>
+                <NuxtLink to="/register">
+                    <button type="button" class="btn header-item">
+                        Ser Creador
+                    </button>
+                </NuxtLink>
             </div>
             <div class="divider"></div>
             <div class="dropdown d-none d-lg-inline-block ms-4">

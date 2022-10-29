@@ -3,7 +3,7 @@
     <div class="card-body pt-3">
         <div class="alert alert-info mb-3 text-center" role="alert">
             <i class="fa fa-exclamation-circle text-primary"></i>
-            Tienes 0 $JE de saldo disponible.
+            Tienes 0 ${{ influencer.money }} de saldo disponible.
         </div>
         <div class="mb-3">
             <ul class="list-group">
@@ -31,7 +31,7 @@
                                 <div class="mr-3">
                                     <img :src="influencer.image" :alt="influencer.name" :title="influencer.name" loading="lazy" width="30" class="rounded-circle">
                                 </div>
-                                <div class="mr-3">$JE</div>
+                                <div class="mr-3">${{ influencer.money }}</div>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
         </div>
         <div class="mb-3">
             <p>
-                Estás comprando <strong>{{ to }} {{ placeholder }}</strong> en $JE
+                Estás comprando <strong>{{ to }} {{ placeholder }}</strong> en ${{ influencer.money }}
             </p>
         </div>
         <div>

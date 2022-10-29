@@ -26,7 +26,7 @@
             <div>
                 <div class="row">
                     <div class="col-6 flex" v-for="(product, index) in influencer.products" :key="index">
-                        <Product :product="product" :influencer-id="influencer.id"/>
+                        <Product :product="product" :influencer="influencer"/>
                     </div>
                 </div>
             </div>

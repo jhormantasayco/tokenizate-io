@@ -41,17 +41,21 @@ export default {
     data: () => ({
       loading: true,
       influencers,
-      influencer: {}
     }),
     computed: {
 
     },
     async created() {
-      const id = Number(this.$route.params.id)
-      this.influencer = this.influencers.find(influencer => influencer.id === id)
+
     },
     methods: {
 
+    },
+    computed: {
+      influencer(){
+        const id = Number(this.$route.params.id)
+        return this.influencers.find(influencer => influencer.id === id) || {}
+      }
     },
   }
 </script>
